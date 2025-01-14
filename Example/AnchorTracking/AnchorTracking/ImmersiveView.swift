@@ -2,7 +2,10 @@ import SwiftUI
 import RealityKit
 import ObservableAnchorTrackingSystem
 
+
+
 struct ImmersiveView: View {
+    @Environment(AnchorPlayer.self) private var player
     private let modelBody: ModelBody = .init(anchorTargets: anchorTargets)
     static let targetJoints: [AnchoringComponent.Target.HandLocation.HandJoint] = [
         .wrist,
@@ -52,7 +55,11 @@ struct ImmersiveView: View {
             content.add(modelBody.root)
             content.add(handAnchorsEntity)
         } update: { content in
-            modelBody.setTransforms(transforms: ObservableAnchorTrackingSystem.observable.transforms)
+            if !player.isPlaying {
+                modelBody.setTransforms(transforms: ObservableAnchorTrackingSystem.observable.transforms)
+            } else {
+                modelBody.setTransforms(transforms: player.transforms)
+            }
         }
         .simultaneousGesture(modelBody.dragGesture)
         .task {ObservableAnchorTrackingSystem.registerSystem()}
