@@ -16,3 +16,10 @@ extension Entity {
         axes.forEach { addChild($0) }
     }
 }
+
+extension Entity {
+    func findSkeltalPosesEntity() -> ModelEntity? {
+        if let model = (self as? ModelEntity)?.model, !model.mesh.contents.skeletons.isEmpty { return self as? ModelEntity }
+        return children.lazy.compactMap {$0.findSkeltalPosesEntity()}.first
+    }
+}

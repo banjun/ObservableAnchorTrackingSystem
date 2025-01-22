@@ -1,0 +1,24 @@
+{
+  "originHash" : "77a18b573c7529e9a937f5ac0117905d99643a72f05c33bab44cb718d3ae7743",
+  "pins" : [
+    {
+      "identity" : "goncharkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonchar/GoncharKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "83316e1ff0fd4e3933d5c4ee7182d0941eb112bd"
+      }
+    },
+    {
+      "identity" : "swifthotreload",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/banjun/SwiftHotReload",
+      "state" : {
+        "revision" : "a008da91686f5c714847adff770d33f398d0afdd",
+        "version" : "0.2.1"
+      }
+    }
+  ],
+  "version" : 3
+}
