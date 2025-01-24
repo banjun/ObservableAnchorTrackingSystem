@@ -44,7 +44,7 @@ public struct ObservableAnchorTrackingSystem: System {
 
     public func update(context: SceneUpdateContext) {
         Self.observable.transforms = context.entities(matching: .init(where: .has(ObservableAnchorEntityComponent.self)), updatingSystemWhen: .rendering).reduce(into: [:]) {
-            guard let e = $1 as? AnchorEntity else { return }
+            guard let e = $1 as? AnchorEntity, e.isAnchored else { return }
             $0[e.anchoring.target] = Transform(matrix: e.transformMatrix(relativeTo: nil))
 
             // AnchorEntity(.head) does not update. fallback to DeviceAnchor. requires WorldTrackingProvider is running by someone
