@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6305B5882D2FEE2E00DA7383 /* ObservableAnchorTrackingSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 6305B5872D2FEE2E00DA7383 /* ObservableAnchorTrackingSystem */; };
-		632452DE2D40972B00369FAA /* GoncharKit in Frameworks */ = {isa = PBXBuildFile; productRef = 632452DD2D40972B00369FAA /* GoncharKit */; };
 		632452E12D40A26300369FAA /* SwiftHotReload in Frameworks */ = {isa = PBXBuildFile; productRef = 632452E02D40A26300369FAA /* SwiftHotReload */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +21,7 @@
 			membershipExceptions = (
 				_RuntimeOverrides.swift,
 				Info.plist,
+				robot.md,
 			);
 			target = 6305B5552D2FEDB400DA7383 /* AnchorTracking */;
 		};
@@ -43,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632452DE2D40972B00369FAA /* GoncharKit in Frameworks */,
 				632452E12D40A26300369FAA /* SwiftHotReload in Frameworks */,
 				6305B5882D2FEE2E00DA7383 /* ObservableAnchorTrackingSystem in Frameworks */,
 			);
@@ -89,7 +88,6 @@
 			name = AnchorTracking;
 			packageProductDependencies = (
 				6305B5872D2FEE2E00DA7383 /* ObservableAnchorTrackingSystem */,
-				632452DD2D40972B00369FAA /* GoncharKit */,
 				632452E02D40A26300369FAA /* SwiftHotReload */,
 			);
 			productName = AnchorTracking;
@@ -122,7 +120,6 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				6305B5862D2FEE2E00DA7383 /* XCLocalSwiftPackageReference "../../../ObservableAnchorTrackingSystem" */,
-				632452DC2D40972B00369FAA /* XCRemoteSwiftPackageReference "GoncharKit" */,
 				632452DF2D40A26300369FAA /* XCRemoteSwiftPackageReference "SwiftHotReload" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -359,14 +356,6 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		632452DC2D40972B00369FAA /* XCRemoteSwiftPackageReference "GoncharKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gonchar/GoncharKit";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		632452DF2D40A26300369FAA /* XCRemoteSwiftPackageReference "SwiftHotReload" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/banjun/SwiftHotReload";
@@ -381,11 +370,6 @@
 		6305B5872D2FEE2E00DA7383 /* ObservableAnchorTrackingSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ObservableAnchorTrackingSystem;
-		};
-		632452DD2D40972B00369FAA /* GoncharKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 632452DC2D40972B00369FAA /* XCRemoteSwiftPackageReference "GoncharKit" */;
-			productName = GoncharKit;
 		};
 		632452E02D40A26300369FAA /* SwiftHotReload */ = {
 			isa = XCSwiftPackageProductDependency;

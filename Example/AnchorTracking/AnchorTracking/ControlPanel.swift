@@ -7,9 +7,11 @@ struct ControlPanel: View {
     @State private var recorder: AnchorRecorder = .init(observable: ObservableAnchorTrackingSystem.observable)
     @State private var recordings: AnchorRecordings = .init(folder: recordingFolder)
     @Environment(AnchorPlayer.self) private var player
+    @Environment(App.Model.self) private var appModel
 
     var body: some View {
         VStack(alignment: .leading) {
+            Toggle("Upper Limb", isOn: .init(get: {appModel.upperLimbVisibility == .visible}, set: {appModel.upperLimbVisibility = $0 ? .visible : .hidden})).toggleStyle(.button)
             Text("\(recordings.list.count) recordings")
             List {
                 ForEach(recordings.list, id: \.start) { session in

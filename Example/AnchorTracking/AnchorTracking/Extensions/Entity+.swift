@@ -23,3 +23,9 @@ extension Entity {
         return children.lazy.compactMap {$0.findSkeltalPosesEntity()}.first
     }
 }
+
+extension Entity {
+    func recursiveModelEntities() -> [ModelEntity] {
+        [self as? ModelEntity].compactMap {$0} + children.flatMap {$0.recursiveModelEntities()}
+    }
+}

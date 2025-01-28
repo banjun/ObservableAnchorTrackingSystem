@@ -1,15 +1,6 @@
 {
-  "originHash" : "77a18b573c7529e9a937f5ac0117905d99643a72f05c33bab44cb718d3ae7743",
+  "originHash" : "03cac0c112b2f1aab195994e15a1a9a45e3a4edc2d8118eb537e0c755bfedf09",
   "pins" : [
-    {
-      "identity" : "goncharkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/gonchar/GoncharKit",
-      "state" : {
-        "branch" : "main",
-        "revision" : "83316e1ff0fd4e3933d5c4ee7182d0941eb112bd"
-      }
-    },
     {
       "identity" : "swifthotreload",
       "kind" : "remoteSourceControl",
